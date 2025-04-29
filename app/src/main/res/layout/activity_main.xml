@@ -89,5 +89,15 @@
         app:layout_constraintBottom_toBottomOf="@id/myTextView"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/btnGoToMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Map Page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView"
+        android:layout_marginTop="50dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

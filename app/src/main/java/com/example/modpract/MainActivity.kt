@@ -74,7 +74,13 @@ class MainActivity : AppCompatActivity() {
         getLocationBtn.setOnClickListener {
             getLocation()
         }
-
+        
+        // Add navigation to MainActivity3 (Map page)
+        val btnGoToMap = findViewById<Button>(R.id.btnGoToMap)
+        btnGoToMap.setOnClickListener {
+            val intent = Intent(this, MainActivity3::class.java)
+            startActivity(intent)
+        }
     }
     //optionsmenu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

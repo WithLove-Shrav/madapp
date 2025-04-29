@@ -67,9 +67,22 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.play.services.location)
+    
+    // OpenStreetMap dependency
+    implementation("org.osmdroid:osmdroid-android:6.1.16")
+    implementation(libs.firebase.firestore.ktx)
+
+    // Preference dependency for PreferenceManager
+    implementation("androidx.preference:preference-ktx:1.2.1")
+    
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    
+    // Explicitly exclude Firebase to avoid conflicts
+    configurations.all {
+        exclude(group = "com.google.firebase", module = "firebase-firestore")
+    }
 }
 
 // Add a task to clean the build directory
